@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "login-angular": {
+    "login-page": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/login-angular",
+            "outputPath": "dist/login-page",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -46,8 +46,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
                 }
               ],
               "outputHashing": "all"
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "login-angular:build:production"
+              "buildTarget": "login-page:build:production"
             },
             "development": {
-              "buildTarget": "login-angular:build:development"
+              "buildTarget": "login-page:build:development"
             }
           },
           "defaultConfiguration": "development"
